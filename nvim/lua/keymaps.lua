@@ -6,6 +6,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 map('n', ' ', '', opt)
 
+
 -- 拆分窗口
 map('n', 's', '', opt)
 map('n', 'sv', ':vsp<CR>', opt)
@@ -33,3 +34,17 @@ map('n', '<C-u>', '10k', opt)
 -- insert 跳转行首行尾
 map('i', '<C-h>', '<ESC>I', opt)
 map('i', '<C-l>', '<ESC>A', opt)
+
+
+-- nvim-tree
+map('n', '<A-e>', ':NvimTreeToggle<CR>', opt)
+
+
+-- bufferline
+map('n', '<C-w>', ':Bdelete!<CR>', opt)
+map('n', '<C-h>', ':BufferLineCyclePrev<CR>', opt)
+map('n', '<C-l>', ':BufferLineCycleNext<CR>', opt)
+
+-- telescope
+map('n', '<C-p>', ':Telescope find_files<CR>', opt)
+map('n', '<C-f>', ':Telescope live_grep<CR>', opt)

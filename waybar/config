@@ -2,9 +2,10 @@
   "layer": "top",
   "position": "top",
   "height": 28,
-  "spacing": 4,
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["clock"],
+  "margin": 10,
+
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["custom/spotify", "clock"],
   "modules-right": [
     "tray",
     "pulseaudio",
@@ -16,12 +17,20 @@
     "battery"
   ],
 
-  // 模块详细配置
   "hyprland/workspaces": {
     "active-only": false,
     "persistent-workspaces": {
       "*": 3
     }
+  },
+
+  "custom/spotify": {
+    "exec": "python /home/jin/.config/waybar/script/spotify.py --player spotify",
+    "format": "{}  ",
+    "return-type": "json",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
   },
 
   "clock": {
@@ -47,14 +56,15 @@
   },
 
   "network": {
-    "interval": 5,
-    "format": "网络 {essid}",
+    "interface": "wlan0",
+    "interval": 2,
+    "format": "{essid} {bandwidthDownBytes}",
     "tooltip-format": "{ipaddr}",
-    "format-disconnected": "断网"
+    "format-disconnected": "无连接"
   },
 
   "disk": {
-    "format": "磁盘 {percentage_free}%",
+    "format": "磁盘 {percentage_used}%",
     "path": "/"
   },
 
