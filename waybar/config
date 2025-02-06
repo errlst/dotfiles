@@ -1,0 +1,81 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 28,
+  "spacing": 4,
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "tray",
+    "pulseaudio",
+    "backlight",
+    "network",
+    "disk",
+    "memory",
+    "cpu",
+    "battery"
+  ],
+
+  // 模块详细配置
+  "hyprland/workspaces": {
+    "active-only": false,
+    "persistent-workspaces": {
+      "*": 3
+    }
+  },
+
+  "clock": {
+    "interval": 1,
+    "locale": "zh_CN.UTF-8",
+    "format": "{:L%H:%M:%S}",
+  },
+
+  "tray": {
+    "spacing": 8,
+    "icon-size": 16
+  },
+
+  "pulseaudio": {
+    "format": "音量 {volume}%",
+    "scroll-step": 5
+  },
+
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "背光 {percent}%",
+    "scroll-step": 5
+  },
+
+  "network": {
+    "interval": 5,
+    "format": "网络 {essid}",
+    "tooltip-format": "{ipaddr}",
+    "format-disconnected": "断网"
+  },
+
+  "disk": {
+    "format": "磁盘 {percentage_free}%",
+    "path": "/"
+  },
+
+  "memory": {
+    "interval": 5,
+    "format": "内存 {percentage}%",
+    "tooltip-format": "内存使用：{used:0.1f}G / {total:0.1f}G"
+  },
+
+  "cpu": {
+    "interval": 5,
+    "format": "处理器 {usage}%",
+    "tooltip-format": "详细负载：\n{avg_frequency} GHz\n{avg_load}%"
+  },
+
+  "battery": {
+    "interval": 10,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "电池 {capacity}%",
+  }
+}
