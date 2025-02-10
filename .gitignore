@@ -2,7 +2,8 @@
 !/waybar
 !/hypr
 !/nvim
-!/fish
 !/ghostty
 !/dunst
+!/wofi
+!/mozila
 !/.gitignore

@@ -1,0 +1,11 @@
+.titlebar-buttonbox-container{
+  display:none;
+} 
+
+.tabbrowser-tab .tab-close-button {
+  visibility: collapse !important;
+}
+
+#alltabs-button {
+  display: none !important;
+}

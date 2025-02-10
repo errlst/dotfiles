@@ -1,5 +1,5 @@
 [global]
-    font = JetBrainsMono Nerd Font 10
+    font = Maple Mono NF CN 20
     frame_color = "#7aa2f7"
     separator_color = frame
     background = "#1a1b26"

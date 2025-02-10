@@ -1,0 +1,47 @@
+* {
+  font-family: 'Maple Mono NF CN SemiBold';
+  font-size: 20px;
+  padding: 4px;
+}
+
+window {
+  background-color: #1a1b26;   /* 深蓝背景 */
+  border: 2px solid #3b4261;   /* 主题边框色 */
+  border-radius: 8px;
+  color: #a9b1d6;             /* 主文本颜色 */
+}
+
+#input {
+  background-color: #1a1b26;
+  color: #7aa2f7;             /* 输入文本蓝色 */
+  border: 2px solid #3b4261;
+  border-radius: 4px;
+  margin: 8px;
+}
+
+#scroll {
+  margin: 8px;
+}
+
+#entry {
+  padding: 8px;
+  border-radius: 4px;
+}
+
+#entry:selected {
+  background-color: #3b4261;   /* 选中项背景 */
+  border: 1px solid #7aa2f7;   /* 选中项边框蓝 */
+  color: #bb9af7;             /* 选中文本紫色 */
+}
+
+#entry:focus {
+  background-color: #3b4261;
+}
+
+#entry > box {
+  margin-left: 8px;
+}
+
+#text:selected {
+  color: #9ece6a;             /* 选中项强调色（绿色） */
+}

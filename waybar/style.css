@@ -1,16 +1,19 @@
+* {
+  font-family: 'Maple Mono NF CN ExtraBold';
+  font-size: 22px;
+}
 /* 设置 Waybar 完全透明 */
 #waybar {
   background-color: rgba(0,0,0,0);  /* 完全透明 */
-  font-family: 'Maple Mono NF CN';
 }
 
 /* 模块部分的样式 */
 #waybar .module {
   background-color: rgba(41, 44, 62, 0.9);  /* 模块背景稍微透明 */
   color: #A9B1D6;
-  border-radius: 10px;  /* 圆角 */
-  padding: 0 5px;
-  margin: 0 5px;
+  border-radius: 16px;  /* 圆角 */
+  padding: 0 6px;
+  margin: 0 6px;
 }
 
 /* 鼠标悬停时，模块的样式 */

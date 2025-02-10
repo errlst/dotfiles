@@ -1,7 +1,14 @@
-vim.opt.encoding = 'utf-8'
-vim.opt.fileencoding = 'utf-8'
+-- Options are automatically loaded before lazy.nvim startup
+-- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
+-- Add any additional options here
 
-vim.opt.mouse = 'a'
+vim.opt.encoding = "utf-8"
+vim.opt.fileencoding = "utf-8"
+
+vim.opt.mouse = "a"
+
+-- 粘贴板
+vim.opt.clipboard = "unnamedplus"
 
 -- 连续按键时限
 vim.opt.timeoutlen = 500
@@ -16,26 +23,22 @@ vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 
--- 参考线
-vim.opt.colorcolumn = '80'
-vim.opt.wrap = false
-
 -- 左侧留出一列用于符号显示
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
 
 -- 行号和当前行
 vim.opt.number = true
+vim.opt.relativenumber = false
 vim.opt.cursorline = true
 
 -- 空格显示为点
 vim.opt.list = true
-vim.opt.listchars = 'space:.'
+vim.opt.listchars = "space:."
 
 -- 补全
 vim.opt.wildmenu = true
 
 vim.opt.autoread = true
-
 
 -- 关闭备份文件
 vim.opt.backup = false
@@ -52,8 +55,8 @@ vim.opt.smartcase = true
 vim.opt.showmode = false
 
 -- 显示 tabline
-vim.opt.tabline = '2'
+vim.opt.tabline = "2"
 
 -- 样式
-vim.opt.background = 'dark'
+vim.opt.background = "dark"
 vim.opt.termguicolors = true
