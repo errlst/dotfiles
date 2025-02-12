@@ -3,9 +3,14 @@
   "position": "top",
   "height": 48,
   "margin": 10,
-
-  "modules-left": ["hyprland/workspaces", "hyprland/window"],
-  "modules-center": ["custom/spotify", "clock"],
+  "modules-left": [
+    "hyprland/workspaces",
+    "custom/spotify",
+    "hyprland/window"
+  ],
+  "modules-center": [
+    "clock"
+  ],
   "modules-right": [
     "tray",
     "pulseaudio",
@@ -14,99 +19,92 @@
     "disk",
     "memory",
     "cpu",
-    "battery", 
-    "custom/battery-mode",
-    "custom/keymap"
+    "custom/battery",
   ],
-
   "hyprland/workspaces": {
     "active-only": false,
     "persistent-workspaces": {
       "*": 3
     }
   },
-
   "hyprland/window": {
     "format": "{title}",
     "icon": true,
     "icon-size": 24,
-    "max-length": 40,
+    "max-length": 40
   },
-
   "custom/spotify": {
     "exec": "python /home/jin/.config/waybar/script/spotify.py --player spotify",
     "format": "{}  ",
     "return-type": "json",
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl next",
-    "on-scroll-down": "playerctl previous"
+    "on-scroll-down": "playerctl previous",
+    "max-length": 20,
+    "min-length": 20
   },
-
   "clock": {
     "interval": 1,
     "locale": "zh_CN.UTF-8",
-    "format": "{:L%H:%M:%S}"
+    "format": "{:L%y-%m-%d %H:%M:%S %A}",
+    "tooltip": false,
   },
-  
-
   "tray": {
     "spacing": 8,
     "icon-size": 24
   },
-
   "pulseaudio": {
-    "format": "󱡒 {volume}%",
-    "scroll-step": 5
+    "format": " {volume}%",
+    "scroll-step": 5,
+    "max-length": 6,
+    "min-length": 6
   },
-
   "backlight": {
     "device": "intel_backlight",
     "format": " {percent}%",
-    "on-scroll-up": "brightnessctl set 5%+",  
-    "on-scroll-down": "brightnessctl set 5%- && if [ $(brightnessctl get) -lt 100 ]; then brightnessctl set 100; fi"
+    "on-scroll-up": "brightnessctl set 5%+",
+    "on-scroll-down": "brightnessctl set 5%- && if [ $(brightnessctl get) -lt 100 ]; then brightnessctl set 100; fi",
+    "max-length": 6,
+    "min-length": 6
   },
-
   "network": {
     "interface": "wlan0",
-    "interval": 1,
+    "interval": 2,
     "format": "  {essid} {bandwidthDownBytes}",
     "tooltip-format": "{ipaddr}",
-    "format-disconnected": "无连接"
+    "format-disconnected": "无连接",
+    "max-length": 18,
+    "min-length": 18
   },
-
   "disk": {
     "format": " {percentage_used}%",
-    "path": "/"
+    "path": "/",
+    "max-length": 5,
+    "min-length": 5
   },
-
   "memory": {
-    "interval": 1,
+    "interval": 2,
     "format": " {percentage}%",
-    "tooltip-format": "内存使用：{used:0.1f}G / {total:0.1f}G"
+    "tooltip-format": "内存使用：{used:0.1f}G / {total:0.1f}G",
+    "max-length": 5,
+    "min-length": 5
   },
-
   "cpu": {
-    "interval": 1,
-    "format": " {usage}% {max_frequency}GHZ",
+    "interval": 2,
+    "format": " {usage}% {max_frequency:.2f}G",
+    "max-length": 10,
+    "min-length": 10
   },
-
-  "battery": {
-    "interval": 10,
-    "states": {
-      "warning": 30,
-      "critical": 15
-    },
-    "format": " {capacity}%"
-  },
-
-  "custom/battery-mode": {
-    "exec": "~/.config/waybar/script/battery-mode.sh",
+  "custom/battery": {
+    "exec": "~/.config/waybar/script/battery.sh",
     "signal": 2,
+    "interval": 2,
     "return-type": "json",
-    "on-click": "~/.config/waybar/script/battery-mode.sh --toggle & pkill -RTMIN+2 waybar",
-    "format": "{}"
+    "on-click": "~/.config/waybar/script/battery.sh --toggle & pkill -RTMIN+2 waybar",
+    "format": "{}",
+    "min-length": 22,
+    "max-length": 22
   },
-
   "custom/keymap": {
     "exec": "/home/jin/.config/waybar/script/keymap.sh",
     "return-type": "json",

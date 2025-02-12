@@ -1,6 +1,7 @@
 * {
   font-family: 'Maple Mono NF CN ExtraBold';
   font-size: 22px;
+  font-weight: bold;
 }
 /* 设置 Waybar 完全透明 */
 #waybar {
@@ -11,61 +12,8 @@
 #waybar .module {
   background-color: rgba(41, 44, 62, 0.9);  /* 模块背景稍微透明 */
   color: #A9B1D6;
-  border-radius: 16px;  /* 圆角 */
+  border-radius: 16px; 
   padding: 0 6px;
   margin: 0 6px;
-}
-
-/* 鼠标悬停时，模块的样式 */
-#waybar .module:hover {
-  background-color: #2D3249;
-  border-radius: 10px;  /* 圆角 */
-}
-
-/* 为各个状态设置颜色 */
-#waybar .module .focused {
-  color: #7AA2F7;
-}
-
-#waybar .module .active {
-  color: #F7768E;
-}
-
-#waybar .module .urgent {
-  color: #FF9E64;
-}
-
-#waybar .module .inactive {
-  color: #4C566A;
-}
-
-/* 分隔符的样式 */
-#waybar .separator {
-  background-color: #343B4C;
-}
-
-/* 设置模块文本的对齐方式 - 删除 */
-#waybar .module.clock {
-  font-weight: bold;
-}
-
-#waybar .module.battery {
-  font-weight: bold;
-}
-
-#waybar .module.network {
-  font-weight: bold;
-}
-
-#waybar .module.pulseaudio {
-  font-weight: bold;
-}
-
-#waybar .module.tray {
-  font-weight: bold;
-}
-
-#waybar .module.window {
-  font-weight: bold;
 }
 

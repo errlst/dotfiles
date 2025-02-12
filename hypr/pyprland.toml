@@ -1,0 +1,19 @@
+[pyprland]
+plugins = [
+  "scratchpads",
+  "wallpapers",
+]
+
+[scratchpads.term]
+animation = "fromTop"
+class = "ghostty-term"
+command = "ghostty"
+size = "40% 40%"
+position = "30% 20%"
+unfocus = "hide"
+
+
+[wallpapers]
+unique = true
+path = "~/Pictures/wallpapers/"
+interval = 10
