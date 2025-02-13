@@ -6,10 +6,10 @@ plugins = [
 
 [scratchpads.term]
 animation = "fromTop"
-class = "ghostty-term"
-command = "ghostty"
-size = "40% 40%"
-position = "30% 20%"
+class = "kitty-term"
+command = "kitty"
+size = "50% 50%"
+position = "25% 10%"
 unfocus = "hide"
 
 

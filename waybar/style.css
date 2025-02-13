@@ -12,8 +12,12 @@
 #waybar .module {
   background-color: rgba(41, 44, 62, 0.9);  /* 模块背景稍微透明 */
   color: #A9B1D6;
-  border-radius: 16px; 
+  border-radius: 8px; 
   padding: 0 6px;
   margin: 0 6px;
+}
+
+#workspaces button.active {
+  color: green;
 }
 
