@@ -16,4 +16,4 @@ unfocus = "hide"
 [wallpapers]
 unique = true
 path = "~/Pictures/wallpapers/"
-interval = 10
+interval = 5
